@@ -1,4 +1,3 @@
-// Home
 exports.home = (req, res) => {
   res.json({
     success: true,
@@ -6,7 +5,6 @@ exports.home = (req, res) => {
   });
 };
 
-// About
 exports.about = (req, res) => {
   res.json({
     success: true,
@@ -14,7 +12,6 @@ exports.about = (req, res) => {
   });
 };
 
-// Contact
 exports.contact = (req, res) => {
   res.json({
     success: true,
@@ -22,7 +19,6 @@ exports.contact = (req, res) => {
   });
 };
 
-// Dynamic time
 exports.getTime = (req, res) => {
   res.json({
     success: true,
@@ -30,11 +26,9 @@ exports.getTime = (req, res) => {
   });
 };
 
-// POST – Echo JSON data
 exports.echoData = (req, res) => {
   const data = req.body;
 
-  // Simple validation
   if (!data || Object.keys(data).length === 0) {
     return res.status(400).json({
       success: false,
